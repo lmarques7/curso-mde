@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Generator
+Bundle-SymbolicName: br.org.cursomde.exemplo1.generator
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.emf.mwe2.launch;bundle-version="2.9.1",
+ br.org.cursomde.exemplo1;bundle-version="1.0.0"

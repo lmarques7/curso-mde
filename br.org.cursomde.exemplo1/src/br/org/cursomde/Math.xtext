@@ -1,0 +1,23 @@
+grammar br.org.cursomde.Math with org.eclipse.xtext.common.Terminals
+
+generate math "http://www.org.br/cursomde/Math"
+
+Problema : 'Problema' name=ID
+           (expressoes += Expressao)*
+           ;
+	
+Expressao :
+            Armazena |
+            Operacao;
+	
+Armazena :
+           'Armazene' termo=INT;
+	
+Operacao :
+           sinal=SinalMatematico termo=INT;
+	
+enum SinalMatematico :
+           SOMA = '+' |
+           SUBTRACAO = '-' |
+           MULTIPLICACAO = '*' |
+           DIVISAO = '/';
