@@ -1,0 +1,17 @@
+module workflow.interpretaQuestionario
+ 
+var model = "br.org.cursomde.exemplo4/src/default.questionario"
+ 
+Workflow {
+   bean = org.eclipse.emf.mwe.utils.StandaloneSetup {
+       platformUri = ".."
+       registerGeneratedEPackage = "br.org.cursomde.exemplo2.questionario.QuestionarioPackage"
+   }
+ 
+   component = org.eclipse.emf.mwe.utils.Reader {
+       uri = "platform:/resource/${model}"
+       modelSlot = "model"
+   }
+   component = questionario.Transforma {}   
+   component = questionario.Executa {}
+}
